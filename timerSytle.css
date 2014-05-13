@@ -1,0 +1,17 @@
+.content {
+    width: 61%;
+    margin: auto;
+}
+
+#timer{
+    width: 50%;
+    margin: auto;
+}
+
+
+#time-display {
+    font-size: 10em;
+    text-align: center;
+    width: 380px;
+    margin: auto;
+}
