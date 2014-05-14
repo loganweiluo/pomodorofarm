@@ -7,14 +7,15 @@
 </head>
 <body ng-controller="timerController">
 <div class="content" id="header">
-    <div><h1>Pomodoro Factory</h1></div>
+    <div><h1>Pomodoro Farm</h1></div>
     <div>One pomodoro a day keeps the doctor away!</div>
 </div>
 <div id="timer">
-    <button>Pomodoro</button>
-    <button>Short break</button>
-    <button>Long break</button>
-    <div id="time-display" ng-model="displayTime">{{displayTime}}</div>
+    <button ng-click="startPomodoro()">Pomodoro</button>
+    <button ng-click="startShortBreak()">Short break</button>
+    <button ng-click="startLongBreak()">Long break</button>
+    <div id="time-display" ng-model="time">{{secToDisplayValue(time)}}</div>
+    <button ng-click="cancelPomodoro()">Cancel</button>
 </div>
 <div class="content" id="footer">
     <a href="">Pomodoro in a nutshell</a>
