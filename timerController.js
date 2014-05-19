@@ -1,4 +1,4 @@
-angular.module('pomodoroFactory', [])
+angular.module('pomodoroFarm', [])
     .controller('timerController', ['$scope', '$timeout', function ($scope, $timeout) {
         var pomodoroInSec = 25 * 60;
         var shortBreakInSec = 5 * 60;

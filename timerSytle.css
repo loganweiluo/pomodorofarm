@@ -1,17 +1,74 @@
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/9eID_a1kLfzp_BP9s4L15g.woff) format('woff');
+}
+
+body{
+    overflow: scroll;
+}
+
 .content {
     width: 61%;
     margin: auto;
 }
 
-#timer{
+#timer {
     width: 50%;
     margin: auto;
+    clear: both;
 }
-
 
 #time-display {
     font-size: 10em;
     text-align: center;
     width: 380px;
+    margin: auto;
+}
+
+#header {
+    height: 150px;
+}
+
+#header h1 {
+    font-family: Lobster;
+    font-size: 5em;
+    text-align: center;
+    border-bottom: 2px lightgrey solid;
+    color: red;
+    margin: 0;
+}
+
+#name{
+    width: 600px;
+    margin: auto;
+}
+
+#slogan-left, #slogan-right{
+    display: inline-block;
+    position: absolute;
+    font-family: Lobster;
+    font-size: 2em;
+}
+
+#slogan-left {
+    right: 51%;
+    text-align: right;
+}
+
+#slogan-right {
+    left: 51%;
+    text-align: left;
+}
+
+#button-group {
+    width: 260px;
+    align-content: center;
+    margin: auto;
+}
+
+#cancel-button {
+    width: 60px;
     margin: auto;
 }

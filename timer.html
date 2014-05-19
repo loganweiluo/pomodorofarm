@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="pomodoroFactory">
+<html ng-app="pomodoroFarm" ng-controller="timerController">
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title ng-if="!isInTimer">Pomodoro Farm</title>
+    <title ng-if="isInTimer">{{secToDisplayValue(time)}}</title>
     <link rel="stylesheet" href="timerSytle.css">
 </head>
-<body ng-controller="timerController">
+<body>
 <div class="content" id="header">
-    <div><h1>Pomodoro Farm</h1></div>
-    <div>One pomodoro a day keeps the doctor away!</div>
+    <div id="name"><h1>Pomodoro Farm</h1></div>
+    <div id="slogan-left">One pomodoro a day</div>
+    <div id="slogan-right">keeps the doctor away!</div>
 </div>
 <div id="timer">
-    <button ng-click="startPomodoro()">Pomodoro</button>
-    <button ng-click="startShortBreak()">Short break</button>
-    <button ng-click="startLongBreak()">Long break</button>
+    <div id="button-group">
+        <button ng-click="startPomodoro()">Pomodoro</button>
+        <button ng-click="startShortBreak()">Short break</button>
+        <button ng-click="startLongBreak()">Long break</button>
+    </div>
     <div id="time-display" ng-model="time">{{secToDisplayValue(time)}}</div>
-    <button ng-click="cancelPomodoro()">Cancel</button>
+    <div id="cancel-button">
+        <button ng-click="cancelPomodoro()">Cancel</button>
+    </div>
 </div>
 <div class="content" id="footer">
     <a href="">Pomodoro in a nutshell</a>
